@@ -51,4 +51,13 @@ public class Category {
     void removeCat(int codCat) {
 
     }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "description='" + description + '\'' +
+                ", codCat=" + codCat +
+                ", calorieHour=" + calorieHour +
+                '}';
+    }
 }
