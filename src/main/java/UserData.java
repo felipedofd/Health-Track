@@ -121,10 +121,10 @@ public class UserData extends Activity {
 
     }
 
-    public void includeAccount(String nameUser, int userCode, String pass, String mail, String tell, String home, String sex ) {
+    public void includeAccount(String nameUser, int userCode, String pass, String mail, String tell, String home, String sex) {
         this.setFullName(fullName = nameUser);
         this.setCodUser(codUser = userCode);
-        this.setPassword(password = pass );
+        this.setPassword(password = pass);
         this.setEmail(email = mail);
         this.setPhone(phone = tell);
         this.setAddress(address = home);
@@ -138,7 +138,20 @@ public class UserData extends Activity {
         System.out.println();
 
 
+    }
 
-
+    @Override
+    public String toString() {
+        return "UserData{" +
+                "email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", password='" + password + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", codUser=" + codUser +
+                ", gender='" + gender + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 }
+
