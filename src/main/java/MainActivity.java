@@ -34,19 +34,21 @@ public class MainActivity {
         user1Activity.includeActivity(user1Activity.codActivity, user1Activity.date, user1Activity.quantityHour, user1Activity.calorie);
 
 
-        User user2 = new User();
-        user2.setFullName("José do Carmo");
-        user2.setAddress("Rua Bahia, n 123 Jundiai, SP");
-        user2.userName ="bahia";
-        user2.includeUser("Felipe", 123);
+        UserInfo userInfo2 = new UserInfo();
+        userInfo2.setFullName("José do Carmo");
+        userInfo2.setAddress("Rua Bahia, n 123 Jundiai, SP");
+        userInfo2.userName ="bahia";
+        userInfo2.includeUser("Felipe", 123);
 
-        user2.includeActivity(1,"13/11/2020", "1 hora", 150);
+        userInfo2.includeActivity(1,"13/11/2020", "1 hora", 150);
 
-        user2.consultUser(user2.getUserName(), user2.getCodUser());
+        userInfo2.consultUser(userInfo2.getUserName(), userInfo2.getCodUser());
 
-        user2.consultUser(user2.getUserName(), user2.getCodUser());
+        userInfo2.consultUser(userInfo2.getUserName(), userInfo2.getCodUser());
 
-        User newAccount = new User();
+        UserInfo newAccount = new UserInfo();
         newAccount.includeAccount("Bahia", 3, "oxeBahia", "bahia@salvador.com.br", "1195555555", "Rua bahia N 128 Jundiai SP","Masculino");
     }
+
+
 }
