@@ -6,6 +6,9 @@ public class Activity extends Category{
     String date;
     String quantityHour;
     double calorie;
+    double weight;
+
+
 
     public Activity(String description, int codCat, double calorieHour) {
         super(description, codCat, calorieHour);
@@ -28,5 +31,15 @@ public class Activity extends Category{
 
     void calculate() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Activity{" +
+                "codActivity=" + codActivity +
+                ", date='" + date + '\'' +
+                ", quantityHour='" + quantityHour + '\'' +
+                ", calorie=" + calorie +
+                '}';
     }
 }
