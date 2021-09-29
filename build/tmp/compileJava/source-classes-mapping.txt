@@ -1,10 +1,14 @@
 Category.java
  Category
-Activity.java
- Activity
-User.java
- User
 UserData.java
  UserData
+Activity.java
+ Activity
+UserInfo.java
+ UserInfo
 MainActivity.java
  MainActivity
+InfoUserDAO.java
+ InfoUserDAO
+Teste.java
+ Teste
