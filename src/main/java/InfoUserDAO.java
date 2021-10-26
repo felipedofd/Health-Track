@@ -1,8 +1,38 @@
+import java.sql.*;
 import java.util.ArrayList;
 
 
 public class InfoUserDAO {
     public ArrayList<UserInfo> getAll() {
+
+        try {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL",
+                    "RM88840",
+                    "fiap21");
+
+            System.out.println("CONECTADO!!!");
+
+            Statement stmt = connection.createStatement();
+
+            ResultSet result = stmt.executeQuery("SELECT * FROM T_USER_INFO");
+
+            while (result.next()) {
+                System.out.println(result.getString("NM_USER") + " " + result.getInt("NR_PESO"));
+            }
+
+
+            connection.close();
+
+        } catch (SQLException e) {
+            System.out.println("DEU RUIM NO LOGIN!!!");
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            System.out.println("DEU RUIM NO DRIVER JDBC!!!");
+            e.printStackTrace();
+        }
+
 
         ArrayList<UserInfo> listInfoUser = new ArrayList<>();
         listInfoUser.add(new UserInfo("Bahia", 90, 1.92));
@@ -21,3 +51,16 @@ public class InfoUserDAO {
 
     }
 }
+
+
+
+//        INSERT INTO T_USUARIO (nm_user, nr_peso) VALUES ('Bahia', '90');
+//        INSERT INTO T_USUARIO (nm_user, nr_peso) VALUES ('Kant', '70');
+//        INSERT INTO T_USER_INFO (nm_user, nr_peso) VALUES ('Ceara', '60');
+//        INSERT INTO T_USER_INFO (nm_user, nr_peso) VALUES ('Jhow', '75');
+//        INSERT INTO T_USER_INFO (nm_user, nr_peso) VALUES ('Ozeias', '86');
+//        INSERT INTO T_USER_INFO (nm_user, nr_peso) VALUES ('Makulele', '56');
+//        INSERT INTO T_USER_INFO (nm_user, nr_peso) VALUES ('Bozonaro', '112');
+//        INSERT INTO T_USER_INFO (nm_user, nr_peso) VALUES ('Lula', '66');
+//        INSERT INTO T_USER_INFO (nm_user, nr_peso) VALUES ('Ciro', '78');
+//        INSERT INTO T_USER_INFO (nm_user, nr_peso) VALUES ('Haddad', '100');
