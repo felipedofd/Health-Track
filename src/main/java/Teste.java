@@ -1,17 +1,57 @@
-import java.util.ArrayList;
+import java.util.List;
 
 public class Teste {
     public static void main(String[] args) {
-        System.out.println("INFORMAÇÕES DOS USUARIOS PROVENIENTES DO BANCO DE DADOS");
+        try {
+            InformacoesUserDAO dao = new InformacoesUserDAOImpl();
+            InformacoesUser informacoesUser = new InformacoesUser();
 
-        ArrayList<UserInfo> listInfoUserDAO = new InfoUserDAO().getAll();
+//            informacoesUser.setNomeUsuario("Manuel");
+//            informacoesUser.setPesoUsuario(132);
+
+//            dao.gravar(informacoesUser);
 
 
+//            ADICIONANDO OS 5 USUARIOS COMO SOLICITADO
+
+                        informacoesUser.setNomeUsuario("Azmodeu");
+            informacoesUser.setPesoUsuario(121);
+
+            dao.gravar(informacoesUser);
+
+                        informacoesUser.setNomeUsuario("Jesus");
+            informacoesUser.setPesoUsuario(99);
+
+            dao.gravar(informacoesUser);
+
+                        informacoesUser.setNomeUsuario("Tiririca");
+            informacoesUser.setPesoUsuario(88);
+
+            dao.gravar(informacoesUser);
+
+                        informacoesUser.setNomeUsuario("Tirulipa");
+            informacoesUser.setPesoUsuario(77);
+
+            dao.gravar(informacoesUser);
 
 
+            informacoesUser.setNomeUsuario("Manuel");
+            informacoesUser.setPesoUsuario(139);
 
-        for (UserInfo userInfo : listInfoUserDAO) {
-            System.out.println(userInfo.toString());
+//            dao.atualizarPesoUser(informacoesUser);
+
+            // CONSULTANDO O BANCO COM METODO GETALL COMO SOLICITADO, E TODOS OS METEDOS DE CRUD FEITOS!!!
+            List<InformacoesUser> informacoesUsers = dao.getAll();
+
+            for (InformacoesUser infos: informacoesUsers){
+                System.out.println(infos.toString());
+            }
+
+            System.out.println("O PESO DOS USUARIOS FORAM GRAVADOS COM SUCESSO");
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
     }
 }

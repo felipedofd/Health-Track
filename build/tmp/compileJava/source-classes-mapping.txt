@@ -1,5 +1,5 @@
-Category.java
- Category
+InfoUserDAO.java
+ InfoUserDAO
 UserData.java
  UserData
 Activity.java
@@ -8,9 +8,15 @@ MainActivity.java
  MainActivity
 UserInfo.java
  UserInfo
-InfoUserDAO.java
- InfoUserDAO
-Teste.java
- Teste
+Category.java
+ Category
 ConnectDbFiap.java
  ConnectDbFiap
+InformacoesUser.java
+ InformacoesUser
+InformacoesUserDAO.java
+ InformacoesUserDAO
+InformacoesUserDAOImpl.java
+ InformacoesUserDAOImpl
+Teste.java
+ Teste
