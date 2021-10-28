@@ -1,4 +1,4 @@
-public class UserData extends Activity {
+public class UserData  {
 
     //CRIANDO CLASSE USUARIOS//
 
