@@ -23,7 +23,7 @@
 .idea/vcs.xml
 build/classes/java/main/CategoryExercise.class
 build/classes/java/main/InfoUserDAO.class
-build/classes/java/main/Teste.class
+build/classes/java/main/TestePesoUserAdd.class
 build/classes/java/main/UserData.class
 build/classes/java/main/UserInfo.class
 build/classes/java/main/User.class

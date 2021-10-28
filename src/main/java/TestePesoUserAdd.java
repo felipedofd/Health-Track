@@ -1,8 +1,10 @@
 import java.util.List;
 
-public class Teste {
+public class TestePesoUserAdd {
     public static void main(String[] args) {
         try {
+
+
             InformacoesUserDAO dao = new InformacoesUserDAOImpl();
             InformacoesUser informacoesUser = new InformacoesUser();
 
@@ -12,7 +14,7 @@ public class Teste {
 //            dao.gravar(informacoesUser);
 
 
-//            ADICIONANDO OS 5 USUARIOS COMO SOLICITADO
+//            ADICIONANDO OS 5 INFORMAÇOES DO USUARIO COMO SOLICITADO "PESO DO USUARIO"
 
                         informacoesUser.setNomeUsuario("Azmodeu");
             informacoesUser.setPesoUsuario(121);
@@ -54,4 +56,10 @@ public class Teste {
         }
 
     }
+
+
+
+
+
+
 }
